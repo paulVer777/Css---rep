@@ -1,0 +1,60 @@
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+*,
+*::after,
+*::before {
+
+    box-sizing: inherit;
+}
+
+/// CUSTOM PROPERTIES /// 
+
+:root {
+    // All childs of root wille have acces to custom properties 
+
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+
+    --color-grey-dark-2:#777;
+}
+
+
+
+html {
+    font-size: 62.5%; //10px
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-image: linear-gradient(to right bottom,var(--color-primary-light),var(--color-primary-dark));
+    min-height: 100vh;
+    line-height: 1.6;
+    color:var(--color-grey-dark-2);
+    font-weight: 400;
+    background-size: cover;
+    font-family: Open-sans,sans-serif // if engine doesnt find the open sans will sue the value after coma, that is sans serif
+}
