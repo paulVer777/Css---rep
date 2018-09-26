@@ -33,12 +33,22 @@ Grey dark 3: #999
 /// CUSTOM PROPERTIES /// 
 
 :root {
-    // All childs of root wille have acces to custom properties 
+    // All childs of root will have acces to custom properties, thats thw way custom properties works, acces to it have element which cp is defined and its children
+    // thats why we declared cp in root, it gives the acces to cp to all elements on the page
+
+    --color-white:#fff;
 
     --color-primary-light: #FF3366;
     --color-primary-dark: #BA265D;
 
+    --color-grey-dark-1:#333;
     --color-grey-dark-2:#777;
+
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+
+    --shadow-1:0 2rem 6rem rgba(0, 0, 0, .5); // x y blur color( 0, 0, 0,opacity)
 }
 
 
@@ -56,5 +66,5 @@ body {
     color:var(--color-grey-dark-2);
     font-weight: 400;
     background-size: cover;
-    font-family: Open-sans,sans-serif // if engine doesnt find the open sans will sue the value after coma, that is sans serif
+    font-family: Open-sans,sans-serif; // if engine doesn't find the open sans will sue the value after coma, that is sans serif
 }

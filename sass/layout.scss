@@ -1,0 +1,30 @@
+.container {
+
+    max-width: 120rem;
+    background-color: var(--color-grey-light-1);
+    margin: 8rem auto;
+    min-height: 50rem;
+    box-shadow: var(--shadow-1);
+}
+
+
+.header {
+    height: 7rem;
+    background-color: var(--color-white);
+    border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+
+    display: flex;
+}
+
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%; // we dont want to grow if there is some free space, we dont want to shrink if there is not enough space, we just set the width of 18%;
+}                  // since its a % value it will be automatic shrink when the viewport decreases;
+
+.hotel-view {
+    background-color: var(--color-white);
+    flex:1; //element should grow as much as it can
+}
