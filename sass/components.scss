@@ -1,6 +1,7 @@
 ///////////////////LOGO
 .logo {
     height: 3.25rem;
+    margin-left: 3rem;
 }
 
 
@@ -14,14 +15,66 @@
 .search {
 
 
-    &__input {}
+    
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &__button {}
+    &__input {
+        font-family: inherit; // it doesnt inherit automatically 
+        font-size: inherit; // it doesnt inherit automatically
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 10rem;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.5rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+       &::-webkit-input-placeholder{ // it selects the placeholder, in order to do that we must use webkit
+          font-weight: 100;
+          color:var(--color-grey-light-4);
+
+       }
+
+    }
+
+    &__input:focus + &__button { // select the sibling ( + )
+
+        background-color: var(--color-grey-light-3);
+    }
+
+
+
+    &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
+ 
+        &:focus {
+            outline: none;
+
+        }
+
+        &:active {
+            // what happens if You clicked the button
+            transform: translateY(2px);
+
+        }
+
+    }
 
 
     &__icon {
         width: 2rem;
         height: 2rem;
+        fill: var(--color-grey-dark-3); // this way we define colors of svg icons
     }
 
 
@@ -37,7 +90,7 @@
 
 
 .user-nav {
-
+    background-color: aqua;
 
     &__icon-box {}
 
